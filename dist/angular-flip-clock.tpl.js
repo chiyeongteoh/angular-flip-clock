@@ -3,7 +3,11 @@
 angular.module('dyFlipClock').run(['$templateCache', function($templateCache) {
   $templateCache.put('src/js/angular-flip-clock-directive/angular-flip-clock-directive.html',
     '<div class="dy-flip-clock">\n' +
-    '  <dy-flip-clock-label text="Hours" hide-divider="true"></dy-flip-clock-label>\n' +
+    '  <dy-flip-clock-label text="Days" hide-divider="true"></dy-flip-clock-label>\n' +
+    '  <dy-flip-clock-number value="vm.getDaysTensPlace()"></dy-flip-clock-number>\n' +
+    '  <dy-flip-clock-number value="vm.getDaysOnesPlace()"></dy-flip-clock-number>\n' +
+    '\n' +
+    '  <dy-flip-clock-label text="Hours"></dy-flip-clock-label>\n' +
     '  <dy-flip-clock-number value="vm.getHoursTensPlace()"></dy-flip-clock-number>\n' +
     '  <dy-flip-clock-number value="vm.getHoursOnesPlace()"></dy-flip-clock-number>\n' +
     '\n' +
@@ -14,7 +18,6 @@ angular.module('dyFlipClock').run(['$templateCache', function($templateCache) {
     '  <dy-flip-clock-label text="Seconds"></dy-flip-clock-label>\n' +
     '  <dy-flip-clock-number value="vm.getSecondsTensPlace()"></dy-flip-clock-number>\n' +
     '  <dy-flip-clock-number value="vm.getSecondsOnesPlace()"></dy-flip-clock-number>\n' +
-    '  </ul>\n' +
     '</div>\n' +
     '');
 }]);

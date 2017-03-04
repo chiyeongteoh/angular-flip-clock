@@ -60,8 +60,7 @@
 .dy-flip-clock-card {
   display: block;
   height: 100%;
-  -webkit-perspective: 200px;
-          perspective: 200px;
+  perspective: 200px;
   margin: 0 !important;
   overflow: visible !important;
   cursor: default !important;
@@ -87,8 +86,7 @@
 }
 
 .dy-flip-clock-card-up {
-  -webkit-transform-origin: 50% 100%;
-          transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
   top: 0;
 }
 
@@ -105,8 +103,7 @@
 }
 
 .dy-flip-clock-card-down {
-  -webkit-transform-origin: 50% 0;
-          transform-origin: 50% 0;
+  transform-origin: 50% 0;
   bottom: 0;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
@@ -140,8 +137,7 @@
 }
 
 .dy-flip-clock-number-animated .dy-flip-clock-number-digit-active {
-  -webkit-animation: dyFlipClockDigitZIndex 0.5s 0.5s linear both;
-          animation: dyFlipClockDigitZIndex 0.5s 0.5s linear both;
+  animation: dyFlipClockDigitZIndex 0.5s 0.5s linear both;
   z-index: 5;
 }
 
@@ -184,20 +180,6 @@
   bottom: 30px;
 }
 
-@-webkit-keyframes dyFlipClockDigitZIndex {
-  0% {
-    z-index: 2;
-  }
-
-  20% {
-    z-index: 4;
-  }
-
-  100% {
-    z-index: 4;
-  }
-}
-
 @keyframes dyFlipClockDigitZIndex {
   0% {
     z-index: 2;
@@ -214,61 +196,31 @@
 
 .dy-flip-clock-number-animated .dy-flip-clock-number-digit-active .dy-flip-clock-card-down {
   z-index: 2;
-  -webkit-animation: dyFlipClockTurnDown 0.5s 0.5s linear both;
-          animation: dyFlipClockTurnDown 0.5s 0.5s linear both;
-}
-
-@-webkit-keyframes dyFlipClockTurnDown {
-  0% {
-    -webkit-transform: rotateX(90deg);
-            transform: rotateX(90deg);
-  }
-
-  100% {
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
-  }
+  animation: dyFlipClockTurnDown 0.5s 0.5s linear both;
 }
 
 @keyframes dyFlipClockTurnDown {
   0% {
-    -webkit-transform: rotateX(90deg);
-            transform: rotateX(90deg);
+    transform: rotateX(90deg);
   }
 
   100% {
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
+    transform: rotateX(0deg);
   }
 }
 
 .dy-flip-clock-number-animated .dy-flip-clock-number-digit-before .dy-flip-clock-card-up {
   z-index: 2;
-  -webkit-animation: dyFlipClockTurnUp 0.5s linear both;
-          animation: dyFlipClockTurnUp 0.5s linear both;
-}
-
-@-webkit-keyframes dyFlipClockTurnUp {
-  0% {
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
-  }
-
-  100% {
-    -webkit-transform: rotateX(-90deg);
-            transform: rotateX(-90deg);
-  }
+  animation: dyFlipClockTurnUp 0.5s linear both;
 }
 
 @keyframes dyFlipClockTurnUp {
   0% {
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
+    transform: rotateX(0deg);
   }
 
   100% {
-    -webkit-transform: rotateX(-90deg);
-            transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
   }
 }
 
@@ -280,40 +232,26 @@
 .dy-flip-clock-number-animated .dy-flip-clock-number-digit-before .dy-flip-clock-card-up .dy-flip-clock-card-shadow {
   background: linear, top, rgba(0, 0, 0, 0.1) 0%, black 100%;
   background: linear, to bottom, rgba(0, 0, 0, 0.1) 0%, black 100%;
-  -webkit-animation: dyFlipClockShowShadow 0.5s linear both;
-          animation: dyFlipClockShowShadow 0.5s linear both;
+  animation: dyFlipClockShowShadow 0.5s linear both;
 }
 
 .dy-flip-clock-number-animated .dy-flip-clock-number-digit-active .dy-flip-clock-card-up .dy-flip-clock-card-shadow {
   background: linear, top, rgba(0, 0, 0, 0.1) 0%, black 100%;
   background: linear, to bottom, rgba(0, 0, 0, 0.1) 0%, black 100%;
-  -webkit-animation: dyFlipClockHideShadow 0.5s 0.3s linear both;
-          animation: dyFlipClockHideShadow 0.5s 0.3s linear both;
+  animation: dyFlipClockHideShadow 0.5s 0.3s linear both;
 }
 
 /*DOWN*/
 .dy-flip-clock-number-animated .dy-flip-clock-number-digit-before .dy-flip-clock-card-down .dy-flip-clock-card-shadow {
   background: linear, top, black 0%, rgba(0, 0, 0, 0.1) 100%;
   background: linear, to bottom, black 0%, rgba(0, 0, 0, 0.1) 100%;
-  -webkit-animation: dyFlipClockShowShadow 0.5s linear both;
-          animation: dyFlipClockShowShadow 0.5s linear both;
+  animation: dyFlipClockShowShadow 0.5s linear both;
 }
 
 .dy-flip-clock-number-animated .dy-flip-clock-number-digit-active .dy-flip-clock-card-down .dy-flip-clock-card-shadow {
   background: linear, top, black 0%, rgba(0, 0, 0, 0.1) 100%;
   background: linear, to bottom, black 0%, rgba(0, 0, 0, 0.1) 100%;
-  -webkit-animation: dyFlipClockHideShadow 0.5s 0.2s linear both;
-          animation: dyFlipClockHideShadow 0.5s 0.2s linear both;
-}
-
-@-webkit-keyframes dyFlipClockShowShadow {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
+  animation: dyFlipClockHideShadow 0.5s 0.2s linear both;
 }
 
 @keyframes dyFlipClockShowShadow {
@@ -323,16 +261,6 @@
 
   100% {
     opacity: 1;
-  }
-}
-
-@-webkit-keyframes dyFlipClockHideShadow {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
   }
 }
 
